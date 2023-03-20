@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav a{
+    color: darkslategrey;
+}
+
+nav a:hover{
+    color: lightgray;
+}
+
+.sidenav{
+    width: 150px;
+    background-color: #073763;
+}
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    font-size: 18px;
+  }
+  
+  .sidenav a:hover {
+    color: lightgrey;
+}
+
+.flex-start{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.flex-start a:hover{
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.flex-end{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+}
+
+.flex-end a:hover{
+    background-color: grey;
+    border-radius: 10px;
+}
+
+main{
+    border: 1px solid red;
+}
+
+#blue-bg{
+    background-color: #2986cc;
+    padding: 20px 10px;
+    color: white;
+}
+
+#blue-bg span{
+    background-color: #1565a1;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 2px 5px;
+}
+
+#blue-bg span:first-child{
+    width: fit-content;
+}
+
+h1{
+    font-size: 34px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.space-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-wrap span{
+    padding: 2px;
+}
+
+.flex-column p:last-child{
+    font-size: 28px;
+}
+
+.btn-primary{
+    background-color: #2986cc;
+    border: 1px solid white;
+}
+
+.flex{
+    display: flex;
+}
+
+.container{
+    flex: 1;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    margin: 20px 10px;
+}
+
+.test{
+    border-bottom: 1px solid lightgrey;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: rgb(233, 233, 233);
+}
+
+.green{
+    background-color: green;
+    color: white;
+    padding: 2px 3px;
+    border-radius: 6px;
+}
+
+.yellow{
+    background-color: #ffd966;
+    color: white;
+    padding: 2px 3px;
+    border-radius: 6px;
+}
+
+.red{
+    background-color: red;
+    color: white;
+    padding: 2px 3px;
+    border-radius: 6px;
+}
+
+.col-2 span{
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+}
+
+.col-2 span:first-child{
+    padding: 2px 2px;
+}
+
+.col-2 span:last-child{
+    padding: 2px 5px;
+}
+
+.strong{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.row{
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+}
+
+.row:last-child{
+    border-bottom: none;
+}
+
+.container .row-img{
+    width: 100%;
+}
+
+.mrg-10{
+    margin: 10px;
+}
+
+.container .row a{
+    margin: 0 10px;
+}

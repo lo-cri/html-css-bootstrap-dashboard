@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Dashboard</title>
+
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+
+<body>
+
+    <!-- link js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- fine link js-->
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="./assets/img/logo.svg" alt=""></a>
+            <form class="d-flexn w-75" role="search">
+                <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+            </form>
+            <a href="#"><i class="fa-solid fa-list"></i></a>
+            <a href="#"><i class="fa-solid fa-question"></i></a>
+            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bell" style="color:orange"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Accedi</a></li>
+                  <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                  <li><a class="dropdown-item" href="#">XxoxX</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    <!-- div che contiene tutto -->
+
+    <div class="d-flex">
+
+    <!-- sidebar a sinistra -->
+    <div class="sidenav d-flex flex-column flex-shrink-0">
+        <div class="flex-start">
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#"><i class="fa-solid fa-signal"></i> Stats</a>
+            <a href="#"><i class="fa-solid fa-signal"></i> Signals</a>
+        </div>
+        <div class="flex-end">
+            <a href="#"><i class="fa-solid fa-gear"></i> Admin</a>
+        </div>
+    </div>
+
+    <main class="flex-grow-1 overflow-auto">
+
+        <!-- "header" blu -->
+        <section id="blue-bg">
+            <div class="flex-row">
+                <div class="flex-column">
+                    <div class="flex-wrap">
+                        <h1>Boolean</h1>
+                        <span>Piano blaze</span>
+                    </div>
+                    <div>
+                        <span>3 app</span>
+                        <i class="fa-solid fa-angles-right" style="color:white"></i>
+                        <span>Boolean mobile app</span>
+                        <span>Boolean web app</span>
+                        <span>Boolean blog app</span>
+                    </div>
+                </div>
+                <div class="flex-column">
+                    <p>Studenti online negli ultimi 30 minuti</p>
+                    <p>125</p>
+                </div>
+                <div>
+                    <p>Nuovo Studente</p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body">
+
+                            <!-- form bootstrap -->
+                            <div class="mb-3">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" size="10" placeholder="Nome">
+
+                                <label for="name">Cognome</label>
+                                <input type="text" id="name" name="name" size="10" placeholder="Cognome">
+                                
+                                <label for="exampleFormControlInput1">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                
+                                <label for="name">Indirizzo</label>
+                                <input type="text" id="name" name="name" size="20" placeholder="Via/Piazza/Viale">
+
+                                <div class="mb-3">
+                                    <label for="formFileSm" class="form-label">Carica immagine</label>
+                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                  </div>
+                                  <div>
+                            </div>
+
+                            <div class="mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Seleziona per continuare
+                                </label>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary">Salva</button>
+                                
+                                <button type="button" class="btn btn-warning">Svuota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+
+        <!-- row che contiene i QUATTRO section-->
+        <div class="row">
+        
+            <!-- div che contiene i primi DUE section-->
+        <div class="col-xl-8">
+
+        <!-- sezione prossime classi -->
+        <section id="flex">
+            <div class="container">
+                <div class="row test">
+                    <div class="col-12">
+                        <h2>Prossime classi</h2>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row strong">                
+                    <div class="col-6">
+                        Nome
+                    </div>
+                    <div class="col-2">
+                        Data inizio
+                    </div>
+                    <div class="col-1">
+                        ROI
+                    </div>
+                    <div class="col-1">
+                        Stato
+                    </div>
+                    <div class="col-2">
+                        Azioni
+                    </div>
+                </div>
+                <!--fila-->      
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 75
+                    </div>
+                    <div class="col-2">
+                        15 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="green">Done</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 76
+                    </div>
+                    <div class="col-2">
+                        16 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="green">Done</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 77
+                    </div>
+                    <div class="col-2">
+                        17 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="yellow">Process</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 78
+                    </div>
+                    <div class="col-2">
+                        18 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="green">Done</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 79
+                    </div>
+                    <div class="col-2">
+                        19 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="red">Failed</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 80
+                    </div>
+                    <div class="col-2">
+                        20 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="green">Done</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 81
+                    </div>
+                    <div class="col-2">
+                        21 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="red">Failed</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+                <!--fila-->
+                <div class="row">                
+                    <div class="col-6">
+                        <img src="./assets/img/class-avatar.jpg" width="25px" alt=""> Classe 82
+                    </div>
+                    <div class="col-2">
+                        22 Feb 2021
+                    </div>
+                    <div class="col-1">
+                        20%
+                    </div>
+                    <div class="col-1">
+                        <span class="green">Done</span>
+                    </div>
+                    <div class="col-2">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--faq-->
+        <section class="flex">
+            <div class="container">
+                    <div class="row test">
+                        <div class="col-12">
+                            <h2>F.A.Q.</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>
+                            <span class="space-between">
+                                <span>
+                                    <a class="btn btn-white" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                      Come aggiungere un nuovo studente?
+                                </span>
+                                <span class="flex-end">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                    
+                                </a>
+                            </span>
+                            
+                        </p>
+                          
+                        <div class="collapse" id="collapseExample1">
+                            <div class="card card-body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ea sed facilis asperiores deserunt ex, sit tempore repellendus nulla?
+                            </div>               
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <p>
+                        <span class="space-between">
+                            <span>
+                                <a class="btn btn-white" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  Come posso accadere alla informazioni del mio account?
+                            </span>
+                            <span class="flex-end">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                                
+                            </a>
+                        </span>
+                        
+                    </p>
+                      
+                    <div class="collapse" id="collapseExample2">
+                        <div class="card card-body">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ea sed facilis asperiores deserunt ex, sit tempore repellendus nulla?
+                        </div>               
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p>
+                        <span class="space-between">
+                            <span>
+                                <a class="btn btn-white" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  Posso usare questa dashboard da mobile? 
+                            </span>
+                            <span class="flex-end">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                                
+                            </a>
+                        </span>
+                        
+                    </p>
+                      
+                    <div class="collapse" id="collapseExample3">
+                        <div class="card card-body">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ea sed facilis asperiores deserunt ex, sit tempore repellendus nulla?
+                        </div>               
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+
+        <!-- div che contiene gli ultimi DUE section-->
+        <div class="col-xl-4">
+
+        <!-- sezione coi ccheckbox -->
+        <section class="flex">
+            <div class="container">
+                <div class="row test">
+                    <div class="col-3">
+                        <h2>To-do List</h2>
+                    </div>
+                </div>
+                <!-- secondo container che tiene i checkbox -->
+                <div class="container">
+                    <div class="row">                
+                        <div class="col-6">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">
+                                Kickoff nuove classi
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Lezione su Bootstrap 5 in classe #75
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Controllare username github studenti
+                            </label>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- grafo -->
+        <section class="flex">
+            <div class="container">
+                <div class="container">
+                    <div class="row row-img">
+                        <img src="./assets/img/stats.jpeg"  alt="">
+                        <h3>Utenti attivi</h3>
+                        <p>Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                    </div>
+                    
+                        <div class="row">
+                            Gennaio: 12200
+                        </div>
+    
+                        <div class="row">
+                            Febbraio: 800                   
+                        </div>
+    
+                        <div class="row">
+                            Marzo: 1500
+                        </div>
+
+                        <div class="row">
+                            <a href="#">Visualizza report approfondito</a>
+                        </div>
+                </div>
+
+            </div>
+        </section>
+        </div>
+
+        </div>
+
+    </main>
+
+    </div>
+    
+</body>
+</html>
